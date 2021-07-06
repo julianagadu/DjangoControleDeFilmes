@@ -1,0 +1,56 @@
+{%extends 'base.html'%} {% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="font-family: 'Montserrat', 500;">{{ filme.titulo}}</h3>
+                    <h5>{{ filme.lancamento}} | {{ filme.produtora }}</h5>
+                </div>
+
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4" style="text-align: center">
+                            <img src="{{ filme.capa.url}}" style="max-width:70%;display: inline-block;" class="img-thumbnail">
+                        </div>
+
+                        <div class="col-md-8">
+                            <table class="table" style="font-family: 'Montserrat', sans-serif;text-align:center;display: inline-block;">
+                                <thead>
+                                    <tr>
+
+                                        <th>Gênero</th>
+
+                                        <th>Duração</th>
+                                        <th>Descrição</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>{{ filme.categoria}}</td>
+
+                                        <td>{{ filme.duracao}}</td>
+                                        <td style="text-align: justify">{{ filme.descricao}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <a href="/home" style="float: left;color:gray;text-decoration: none;margin-top:15px;"><i class="fa fa-arrow-left"></i>Home</a>
+
+                    <a href="{{filme.id}}/editar" class="btn btn-secondary mt-2" style="margin:5px;float:right"><i class="fa fa-edit"></i> Editar</a>
+                    <a href="{{filme.id}}/delete" class="btn btn-warning mt-2" style="margin: 5px;float:right"><i class="fa fa-trash"></i> Remover</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

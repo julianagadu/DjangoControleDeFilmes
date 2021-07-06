@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&display=swap');
+
+
+#grayMenu {
+    background-color: black;
+}
+
+#grayMenu ul li a {
+    color: white;
+}
+
+#grayMenu i {
+    color: f5dc36;
+}
+
+nav {
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#content {
+    background-color: f2f0f1;
+    border-radius: 7px;
+}
+
+#content-data {
+    padding-top: 15px;
+	padding-left: 25px
+}
+
+#hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: grey;
+    background-color: grey;
+    height: 1px;
+    margin: 20px 0;
+    width: 83%;
+}
+
+.btn-novo{
+    position: fixed;
+    top: 72%;
+    left: 1%;
+    padding: 10px;
+    z-index: 10000000;
+    text-decoration: none;
+
+}
+
+#content-data{
+	width: 100%; text-align: left; margin-left: auto; margin-right: auto;
+}

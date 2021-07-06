@@ -1,0 +1,25 @@
+{%extends 'base.html'%} {% block content %}
+
+<h1 style="font-family: 'Montserrat', sans-serif, 100;">My movies</h1>
+<div style="float: right; margin-right: 50px;">
+    <a href="novo" style="position: fixed;top: 85%; right: 1%; padding: 10px; z-index: 10000000; text-decoration: none;"><button class="rounded-circle" style="width:50px;height: 50px;">+</button></a>
+</div>
+
+<ul>
+
+    {% for categoria in categorias %}
+    <div style="opacity: 1">      
+        <h3>{{categoria.genero}}</h3>
+    </div>
+        <div class="row" style="margin-top: 5px; margin-bottom: 5px">
+            {% for filme in filmes%}
+                {% if filme.categoria == categoria %}
+                    <div class="col-sm-3">    
+                            <a href="/home/detail/{{filme.id}}"><img src="{{ filme.capa.url}}" alt="{{filme.titulo}}" height="450" width="300" class="img-thumbnail"> </a>
+                    </div>   
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</ul>
+{% endblock %}
